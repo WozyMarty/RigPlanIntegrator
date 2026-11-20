@@ -1,0 +1,43 @@
+# Build outputs
+build/
+Desktop_Debug/
+*.o
+*.obj
+*.a
+*.la
+*.lo
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Qt / qmake
+*.pro.user
+*.pro.user.*
+Makefile.Debug
+Makefile.Release
+object_script.*
+qrc_*.cpp
+moc_*.cpp
+moc_*.h
+ui_*.h
+
+# Qt Creator
+CMakeLists.txt.user
+CMakeLists.txt.user.*
+
+# Editors and operating systems
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs, temporary files and local secrets
+*.log
+*.tmp
+*.bak
+.env
+.env.*
