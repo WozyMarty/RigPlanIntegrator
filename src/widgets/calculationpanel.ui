@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CalculationPanel</class>
+ <widget class="QWidget" name="CalculationPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>380</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#CalculationPanel { background-color: #0D1117; border-left: 1px solid #21262D; }</string>
+  </property>
+  <layout class="QVBoxLayout" name="calcPanelLayout">
+   <property name="leftMargin">
+    <number>12</number>
+   </property>
+   <property name="topMargin">
+    <number>12</number>
+   </property>
+   <property name="rightMargin">
+    <number>12</number>
+   </property>
+   <property name="bottomMargin">
+    <number>12</number>
+   </property>
+   <property name="spacing">
+    <number>10</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="calcHeaderLayout">
+     <item>
+      <widget class="QLabel" name="panelTitle">
+       <property name="text">
+        <string>⚡ Painel de Cálculos (16)</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #FFFFFF; font-weight: 800; font-size: 14px;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="calcHeaderSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="progressLabel">
+       <property name="text">
+        <string>16/16 Concluídos</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #3FB950; font-weight: bold; font-size: 12px;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="searchBox">
+     <property name="placeholderText">
+      <string>🔍 Buscar cálculo ou fórmula...</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit { background-color: #161B22; color: #C9D1D9; border: 1px solid #30363D; border-radius: 6px; padding: 6px 12px; font-size: 12px; }</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="calcActionsLayout">
+     <item>
+      <widget class="QPushButton" name="expandAllBtn">
+       <property name="text">
+        <string>Expandir Todos</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { background-color: #21262D; color: #C9D1D9; border: 1px solid #30363D; border-radius: 4px; padding: 3px 8px; font-size: 11px; }</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="collapseAllBtn">
+       <property name="text">
+        <string>Recolher Todos</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { background-color: #21262D; color: #C9D1D9; border: 1px solid #30363D; border-radius: 4px; padding: 3px 8px; font-size: 11px; }</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="actionSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="clearAllBtn">
+       <property name="text">
+        <string>Limpar Dados</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton { background-color: #21262D; color: #C9D1D9; border: 1px solid #30363D; border-radius: 4px; padding: 3px 8px; font-size: 11px; }</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QScrollArea" name="calcScrollArea">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QScrollArea { border: none; background: transparent; }</string>
+     </property>
+     <widget class="QWidget" name="scrollContainer">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>356</width>
+        <height>580</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="blocksLayout">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <item>
+        <!-- Block 1 -->
+        <widget class="QGroupBox" name="calcBlock1">
+         <property name="title">
+          <string>1. Carga Útil Líquida (Net Payload)</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QGroupBox { color: #3FB950; font-weight: bold; border: 1px solid #30363D; border-radius: 6px; margin-top: 6px; padding-top: 10px; background-color: #161B22; }</string>
+         </property>
+         <layout class="QVBoxLayout" name="block1Layout">
+          <item>
+           <widget class="QLabel" name="formula1">
+            <property name="text">
+             <string>Fórmula: F_net = (M_cargo + M_rigging) * g</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: #8B949E; font-size: 11px;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="input1_1">
+            <property name="text">
+             <string>M_cargo = 15000 kg</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background: #0D1117; color: #C9D1D9; border: 1px solid #30363D; padding: 4px; border-radius: 4px;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="result1">
+            <property name="text">
+             <string>Resultado: 15.450 kgf</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: #3FB950; font-weight: bold; font-size: 12px;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <!-- Block 2 -->
+        <widget class="QGroupBox" name="calcBlock2">
+         <property name="title">
+          <string>2. Cap. Bruta do Guindaste</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QGroupBox { color: #3FB950; font-weight: bold; border: 1px solid #30363D; border-radius: 6px; margin-top: 6px; padding-top: 10px; background-color: #161B22; }</string>
+         </property>
+         <layout class="QVBoxLayout" name="block2Layout">
+          <item>
+           <widget class="QLabel" name="result2">
+            <property name="text">
+             <string>Resultado: 28.500 kgf (Raio 18m)</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: #3FB950; font-weight: bold; font-size: 12px;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <!-- Block 3 -->
+        <widget class="QGroupBox" name="calcBlock3">
+         <property name="title">
+          <string>3. Fator de Utilização (%)</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QGroupBox { color: #58A6FF; font-weight: bold; border: 1px solid #30363D; border-radius: 6px; margin-top: 6px; padding-top: 10px; background-color: #161B22; }</string>
+         </property>
+         <layout class="QVBoxLayout" name="block3Layout">
+          <item>
+           <widget class="QLabel" name="result3">
+            <property name="text">
+             <string>Resultado: 54.21% (Margem de Segurança OK)</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: #58A6FF; font-weight: bold; font-size: 12px;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

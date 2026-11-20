@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>RigPlan Integrator - Conversão &amp; Integração de Planos de Rigging</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow { background-color: #0D1117; }</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="rootLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="HeaderBar" name="headerBar" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>56</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="pageMain">
+       <layout class="QHBoxLayout" name="mainLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QSplitter" name="mainSplitter">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QSplitter::handle { background-color: #21262D; width: 2px; }</string>
+          </property>
+          <widget class="DocumentPreview" name="docPreview" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>500</width>
+             <height>400</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="CalculationPanel" name="calcPanel" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>340</width>
+             <height>400</height>
+            </size>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageGallery">
+       <layout class="QHBoxLayout" name="galleryLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="PresetGallery" name="presetGallery" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageEditor">
+       <layout class="QHBoxLayout" name="editorLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="PresetEditor" name="presetEditor" native="true"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="styleSheet">
+    <string notr="true">QStatusBar { background-color: #161B22; color: #8B949E; }</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>HeaderBar</class>
+   <extends>QWidget</extends>
+   <header>widgets/headerbar.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>DocumentPreview</class>
+   <extends>QWidget</extends>
+   <header>widgets/documentpreview.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CalculationPanel</class>
+   <extends>QWidget</extends>
+   <header>widgets/calculationpanel.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PresetGallery</class>
+   <extends>QWidget</extends>
+   <header>widgets/presetgallery.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>PresetEditor</class>
+   <extends>QWidget</extends>
+   <header>widgets/preseteditor.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
